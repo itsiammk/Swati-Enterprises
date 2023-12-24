@@ -1,0 +1,223 @@
+/* components/Gallery.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap');
+
+.gallery {
+  font-family: 'ubuntu', sans-serif;
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 40px 50px 100px 50px;
+  background-color: #bff0ff;
+}
+
+.mediaRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+  margin-bottom: 20px; /* Add spacing between rows */
+}
+
+.mediaItem {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.image,
+.video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s;
+    /* border: 10px solid green; */
+    padding: 10px;
+    box-shadow: 0 0px 25px 0 #45d2ff94;
+
+}
+
+.video video {
+  width: 100%;
+  padding: 10px;
+  max-height: 66vh;
+}
+.image img{
+  width: 100%;
+  height: auto;
+}
+
+.image:hover,
+.video:hover {
+  transform: scale(1.05);
+}
+
+.mediaFullView {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000000;
+}
+
+.mediaContent {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  background-color: #3F00FF;
+  padding: 5px 10px;
+  border-radius: 10px;
+  z-index: 999999;
+  transition: background-color 0.2s;
+}
+
+.closeButton:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #3F00FF;
+}
+
+/* Style the vertical scrollbar */
+.gallery::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.gallery::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+  border-radius: 6px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background-color: #0074e4; /* Thumb color */
+  border-radius: 6px; /* Rounded corners */
+}
+
+/* Style the horizontal scrollbar in image and video sections */
+.mediaRow::-webkit-scrollbar {
+  height: 12px; /* Height of the horizontal scrollbar */
+  border-radius: 6px; /* Rounded corners */
+
+}
+
+.mediaRow::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.mediaRow::-webkit-scrollbar-thumb {
+  background-color: #3F00FF; /* Thumb color */
+  border-radius: 6px; /* Rounded corners */
+}
+
+.title {
+  font-size: 70px;
+  padding: 40px 20px 20px 20px;
+  margin: 0px 0 0px 0;
+  font-weight: 100;
+  color: #000000;
+  background-color: #a8eaff;
+}
+.title h1{
+    font-size: 70px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.title p{
+    font-family: 'ubuntu', sans-serif;
+    color: #3F00FF;
+    letter-spacing: 8px;
+    font-size: 30px;
+    text-align: center;
+}
+.section {
+  padding: 10px 30px 0 30px;
+}
+.containerTitle{
+  background-color: #3F00FF;
+}
+.containerTitle p{
+  color: white;
+}
+.containerGallery{
+  background-color: #000000;
+}
+.containerImage, .containerVideo {
+  box-shadow: 0 0px 26px 0 #3f00ffb5;
+}
+
+@media screen and (max-width: 768px) {
+  .title{
+    background-color: rgb(225, 253, 255);
+  }
+  .title h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 700;
+  }
+  .title p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-align: left;
+    font-weight: 400;
+    padding-top: 5px;
+    letter-spacing: 2px;
+  }
+  .gallery{
+    padding: 0;
+    height: 50vh;
+    padding: 0;
+    background-color: white;
+  }
+  .mediaRow{
+    grid-template-columns: 1fr;
+  }
+  .image,
+  .video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s;
+    /* border: 10px solid green; */
+    padding: 10px;
+    box-shadow: 0 0px 10px 0 #45d1ff49;
+  }
+  .video{
+    padding: 0;
+  }
+  .containerImage, .containerVideo {
+    box-shadow: 0 0px 30px 0 #4000ff7a;
+  }
+  .containerTitle{
+    background-color: #3F00FF;
+    margin: 0 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .containerTitle p{
+    color: white;
+  }
+  .containerGallery{
+    background-color: #000000;
+  }
+  .gallery::-webkit-scrollbar-track {
+    background: #000000; /* Track color */
+    border-radius: 6px;
+  }
+}

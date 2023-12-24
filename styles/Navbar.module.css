@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap');
+
+.container {
+  font-family: 'Montserrat', sans-serif;
+    height: 150px;
+    background-color: transparent; /* Initial transparent background */
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 0px 100px;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    z-index: 9999;
+    color: white;
+    transition: all 0.75s ease;
+  }
+  .scrolled{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.3);
+    height: 80px;
+    transition: all 0.5s ease;
+  }
+  .themeContainer{
+    background-color: black;
+  }
+  .img{
+    transition: all 0.75s ease;
+    width: 400px;
+    height: 125px;
+    border-radius: 10px;
+  }
+  .scrolledimg{
+    width: 250px;
+    height: 70px;
+    transition: all 0.75s ease;
+    background-color: transparent;
+  }
+  
+  .listItem {
+    display: inline;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    padding-top: 12px;
+  }
+  .listItem:hover{
+    color: #3F00FF;
+    border-top: 5px solid #3F00FF;
+    transition: all 0.1s ease;
+  }
+  .listItem1{
+    display: inline;
+    margin-right: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #3F00FF;
+    padding: 15px 15px;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.3);
+
+  }
+  .listItem1:hover{
+    background-color: white;
+    color: #3F00FF;
+    transition: all 0.4s ease;
+  }
+  .scrolledlist{
+    color: #2f2f2f	;
+    font-weight: 500;
+  }
+  .themeListItem{
+    color: white;
+  }
+  .slogan{
+    margin-left: 5.5vw;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  
+  .slogan::before {
+    content: "Committed to build better . . . ";
+    display: inline-block;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: textAnimation 2s steps(40, end) infinite alternate;
+  }
+  
+  @keyframes textAnimation {
+    to {
+      width: 100%;
+    }
+  }
+  .scrolledslogan{
+    display: none;
+  }
+  
+  .hamburger {
+    display: none;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .line {
+    width: 100%;
+    height: 4px;
+    background-color: #3F00FF	;
+  }
+  
+  .menu {
+    font-family: 'Montserrat', sans-serif;
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 65vh;
+    background-color: white;
+    top: 70px;
+    /* right: 0px; */
+    z-index: 9999;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #2f2f2f	;
+    list-style: none;
+    transition: all 0.75s ease;
+    
+  }
+  /* Add this to your existing CSS file or component styles */
+  /* Styling for the dropdown icon */
+  .down {
+    font-size: 14px; /* Adjust the font size as needed */
+    margin-left: 5px; /* Add some spacing between text and icon */
+    cursor: pointer;
+  }
+  
+  /* Styling for the dropdown menu */
+  .subMenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+  background-color: #ffffff; /* Background color of the dropdown menu */
+  border-top: none; /* Remove top border to align with the "Projects" item */
+  z-index: 99999999; /* Ensure the dropdown appears above other content */
+  color: #2f2f2f;
+  height: auto;
+  top: 16vh;
+  right: 18.1vw;
+  transition: all 0.75s ease;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,.3);
+  
+}
+.subMenuTheme{
+  background-color: #000000;
+}
+/* Styling for each dropdown item */
+.subMenuItem {
+  padding: 15px 20px; /* Adjust padding as needed */
+  transition: all 0.2s ease;
+  
+}
+.subMenuItemTheme{
+  color: white;
+}
+.menuItem{
+  padding: 5px 0;
+  width: 60vw;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Styling for the last dropdown item to remove the bottom border */
+.subMenuItem:last-child {
+  border-bottom: none;
+}
+
+/* Hover effect on dropdown items */
+.subMenuItem:hover {
+  background-color: #f0f0f070; /* Background color on hover */
+  color: #3F00FF;
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,.3);
+
+}
+.subMenuItemTheme:hover{
+  background-color: #000000;
+}
+.scrolledmenu{
+  top: 12vh;
+  right: 19vw;
+}
+.down{
+  display: inline-block;
+  transform: rotate(45deg);
+  height: 12px;
+  width: 12px;
+  text-align: center;
+  padding-bottom: 0px;
+  font-weight: 700;
+  border-right: 3px solid #2f2f2f;
+  border-bottom: 3px solid #2f2f2f;
+  margin: 3px 0 3px 4px;
+}
+.up{
+  display: inline-block;
+  transform: rotate(90deg);
+  height: 12px;
+  width: 12px;
+  text-align: center;
+  padding-bottom: 0px;
+  font-weight: 700;
+  border-right: 3px solid #2f2f2f;
+  border-bottom: 3px solid #2f2f2f;
+  margin: 3px 0 3px 4px;
+}
+.downTheme{
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+}
+
+
+  @media screen and (max-width: 780px) {
+    .container {
+      padding: 0px 20px;
+      background-color: white;
+      color: #3F00FF	;
+      box-shadow: 0 5px 15px 0 rgba(0,0,0,.3);
+      height: 70px;
+    }
+  
+    .listItem, .listItem1 {
+      display: none;
+    }
+  
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .img{
+      width: 240px;
+      height: 70px;
+      padding-bottom: 5px;
+      padding-top: 3px;
+    }
+    .slogan{
+      display: none;
+    }
+    .mobileThemeContainer{
+      background-color: #3F00FF !important;
+    }
+    .containerHamburger .line{
+      background-color: black;
+    }
+    .containerMenu{
+      background-color: #000000;
+      color: white;
+    }
+  }

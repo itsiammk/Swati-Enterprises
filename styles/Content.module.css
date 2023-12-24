@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap');
+
+.content{
+    font-family: 'Ubuntu', sans-serif;
+    /* padding-top: 50px; */
+    height: 82vh;
+    /* background-color: aqua; */
+}
+.frontImage{
+    width: 100%;
+}
+.imageContainer {
+  position: relative;
+  width: 100vw;
+  height: 92vh;
+  background-size: cover;
+  background-position: center;
+}
+
+  
+  .frontImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7; /* Adjust opacity as needed (0.7 = 70% visibility) */
+    /* Your existing styles for the image */
+}
+
+.textOverlay {
+    position: absolute;
+    /* top: 1vh; Adjust the vertical position as needed */
+    left: 7%; /* Adjust the horizontal position as needed */
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: left;
+    color: white; /* Text color */
+    margin-top: 60vh;
+    margin-left: 10vw;
+  }
+  
+  .textOverlay h2 {
+    font-size: 45px;
+    margin-bottom: 2vh;
+    margin-left: 10vw;
+}
+
+.textOverlay p {
+    font-size: 20px;
+    margin-left: 10vw;
+    font-weight: 300;
+  }
+  .button{
+    width: 15vw;
+    background-color: #3F00FF	;
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 15px 0;
+    border-radius: 10px;
+    margin: 3vh 0 0 10vw;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.3);
+    font-weight: 500;
+    
+  }
+  .button:hover{
+    transition: all 0.75s ease;
+    background-color: white;
+    color: #3F00FF	;
+    font-weight: 500;
+  }
+  @media screen and (max-width: 768px) {
+    .content {
+      /* Add mobile-specific styles here */
+      padding-top: 9vh; /* Example: Add some padding for better mobile readability */
+      height: auto;
+    }
+  
+    .imageContainer {
+      /* Adjust mobile-specific styles for the image container */
+      height: 35vh; /* Auto height to fit content */
+    }
+  
+    .frontImage {
+      /* Adjust mobile-specific styles for the front image */
+      width: 100%;
+      height: auto; /* Auto height to maintain aspect ratio */
+    }
+  
+    .textOverlay {
+      /* Adjust mobile-specific styles for the text overlay */
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      margin: 0;
+      width: 100%;
+      padding-top: 20vh;
+    }
+    .textOverlay h2{
+      font-size: 20px;
+      margin-left: 0;
+    }
+  
+    .button {
+      width: 30vw;
+      padding: 5px 5px;
+      margin: 0 auto;
+      font-size: 20px;
+      border-radius: 5px;
+    }
+  }

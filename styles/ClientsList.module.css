@@ -1,0 +1,157 @@
+/* ClientsList.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap');
+.container {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 100%;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding: 100px 0;
+    /* margin-top: 10px; */
+  }
+.containerTheme {
+    background-color: #000000;
+  }
+  
+  .header {
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 73px;
+    color: #000000;
+}
+
+.intro {
+    font-size: 18px;
+    color: #3F00FF;
+    margin-top: 10px;
+    padding-bottom: 10vh;
+  }
+  
+  .scrollContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto; /* Enable horizontal scrolling for the list */
+    padding-bottom: 20px;
+    /* background-color: #0074e4; */
+    margin: 30px 20px;
+  }
+  
+  .clientList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .clientItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px; /* Add spacing between clients */
+  }
+  
+  .logoContainer {
+    width: 120px; /* Adjust the width of the logo container as needed */
+    height: 120px; /* Adjust the height of the logo container as needed */
+    /* border-radius: 50%; */
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .img{
+    border-radius: 50%;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.3);
+
+  }
+  
+  .clientName {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+  }
+  /* ClientsList.module.css */
+  .clientNameTheme{
+    color: white;
+  }
+  .nine{
+    padding-bottom: 5vh;
+  }
+  .nine h1 {
+    text-align:center; font-size:70px; text-transform:uppercase; color:#222; letter-spacing:1px;
+    font-family:"Playfair Display", serif; font-weight:600;
+  }
+  .nine span {
+    margin-top: 5px;
+      font-size:15px; color:#3F00FF; word-spacing:1px; font-weight:normal; letter-spacing:2px;
+      text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
+      color: #000000;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 27px 0;
+      grid-gap: 20px;
+      align-items: center;
+  }
+  
+  .nine h1 span:after,.nine h1 span:before {
+      content: " ";
+      display: block;
+      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #ccc;
+      height: 5px;
+    background-color:#f8f8f8;
+  }
+  .nineTheme h1, .nineTheme span {
+    color: white;
+  }
+
+/* Style the vertical scrollbar */
+.container::-webkit-scrollbar {
+    width: 6px; /* Set the width of the scrollbar */
+  }
+  
+  .container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+  }
+  
+  .container::-webkit-scrollbar-thumb {
+    background-color: #3F00FF; /* Thumb color */
+    border-radius: 6px; /* Rounded corners */
+  }
+  
+  /* Style the horizontal scrollbar */
+  .scrollContainer::-webkit-scrollbar {
+    height: 6px; /* Set the height of the horizontal scrollbar */
+  }
+  
+  .scrollContainer::-webkit-scrollbar-track {
+    border-radius: 6px;
+    background: #f1f1f1; /* Track color */
+  }
+  
+  .scrollContainer::-webkit-scrollbar-thumb {
+    background-color: #3F00FF; /* Thumb color */
+    border-radius: 6px; /* Rounded corners */
+  }
+  @media screen and (max-width: 768px) {
+    .nine h1 {
+      font-size: 25px;
+      border-bottom: 2px solid blue;
+      /* width: 80vw; */
+      margin: 0 30px 10px 30px;
+      padding: 5px 0;
+    }
+    .nine span{
+      color: #333;
+      font-weight: 200;
+      margin-top: 30px;
+      padding: 0 10px;
+    }
+  }
+
+  .nineTheme span {
+    color: white;
+  }
